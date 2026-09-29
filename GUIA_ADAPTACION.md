@@ -80,3 +80,9 @@ Sigue este orden; compila (`Build → Make Project`) después de los pasos 3, 5 
 | En el emulador el sensor de luz/proximidad no cambia | Los sensores virtuales no se mueven solos | *Extended controls (⋯) → Virtual sensors*. |
 | La app se ve bajo la barra de estado | targetSdk 36 fuerza *edge-to-edge* | Ya resuelto en `MainActivity` con `setOnApplyWindowInsetsListener`; si agregas otra Activity, repítelo. |
 | `Unsupported class file major version` / Gradle no sincroniza | JDK equivocado | *Settings → Build → Gradle → Gradle JDK* = el JDK embebido de Android Studio (17+). |
+
+---
+
+## Otros documentos de este proyecto
+- `GUIA_MANUAL.md`: paso a paso completo **sin IA** (con el código real, mapa a los repos del profe y cómo añadir un fragment nuevo).
+- `PROMPT_GEMINI.md`: prompt completo para Gemini, prompts de seguimiento y plantilla de declaración de uso de IA.
