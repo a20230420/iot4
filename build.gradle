@@ -1,0 +1,6 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '9.2.0' apply false
+    // El plugin de Safe Args debe tener la MISMA versión que las librerías navigation-* del app/build.gradle
+    id 'androidx.navigation.safeargs' version '2.9.6' apply false
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- >>> CAMBIAR AQUÍ <<< un par etiqueta/valor por cada campo de tu entidad que quieras mostrar -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentos.DetalleFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/textViewTituloDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/detalle_titulo"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/EtiquetaDetalle"
+            android:text="@string/detalle_label_id" />
+
+        <TextView
+            android:id="@+id/textViewDetalleId"
+            style="@style/ValorDetalle"
+            tools:text="1" />
+
+        <TextView
+            style="@style/EtiquetaDetalle"
+            android:text="@string/detalle_label_nombre" />
+
+        <TextView
+            android:id="@+id/textViewDetalleNombre"
+            style="@style/ValorDetalle"
+            tools:text="Nombre completo" />
+
+        <TextView
+            style="@style/EtiquetaDetalle"
+            android:text="@string/detalle_label_usuario" />
+
+        <TextView
+            android:id="@+id/textViewDetalleUsername"
+            style="@style/ValorDetalle"
+            tools:text="username" />
+
+        <TextView
+            style="@style/EtiquetaDetalle"
+            android:text="@string/detalle_label_email" />
+
+        <TextView
+            android:id="@+id/textViewDetalleEmail"
+            style="@style/ValorDetalle"
+            tools:text="correo@ejemplo.com" />
+
+        <TextView
+            style="@style/EtiquetaDetalle"
+            android:text="@string/detalle_label_telefono" />
+
+        <TextView
+            android:id="@+id/textViewDetalleTelefono"
+            style="@style/ValorDetalle"
+            tools:text="123-456" />
+
+        <TextView
+            style="@style/EtiquetaDetalle"
+            android:text="@string/detalle_label_web" />
+
+        <TextView
+            android:id="@+id/textViewDetalleWeb"
+            style="@style/ValorDetalle"
+            tools:text="ejemplo.org" />
+
+        <TextView
+            style="@style/EtiquetaDetalle"
+            android:text="@string/detalle_label_empresa" />
+
+        <TextView
+            android:id="@+id/textViewDetalleEmpresa"
+            style="@style/ValorDetalle"
+            tools:text="Empresa" />
+    </LinearLayout>
+</ScrollView>

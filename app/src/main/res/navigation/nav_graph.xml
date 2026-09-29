@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Home: punto de entrada. Safe Args genera HomeFragmentDirections a partir de estas acciones -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.labmodelo.fragmentos.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_listaFragment"
+            app:destination="@id/listaFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_sensorFragment"
+            app:destination="@id/sensorFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listaFragment"
+        android:name="com.example.labmodelo.fragmentos.ListaFragment"
+        android:label="fragment_lista"
+        tools:layout="@layout/fragment_lista">
+        <action
+            android:id="@+id/action_listaFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.example.labmodelo.fragmentos.DetalleFragment"
+        android:label="fragment_detalle"
+        tools:layout="@layout/fragment_detalle">
+        <!-- >>> CAMBIAR AQUÍ <<< nombre y tipo del argumento (tu entidad Serializable) -->
+        <argument
+            android:name="usuario"
+            app:argType="com.example.labmodelo.entity.Usuario" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sensorFragment"
+        android:name="com.example.labmodelo.fragmentos.SensorFragment"
+        android:label="fragment_sensor"
+        tools:layout="@layout/fragment_sensor" />
+</navigation>

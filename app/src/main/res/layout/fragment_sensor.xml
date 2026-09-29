@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentos.SensorFragment">
+
+    <TextView
+        android:id="@+id/textViewTituloSensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/sensor_titulo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Aquí se informa si el sensor existe (o el motivo por el que no se puede usar) -->
+    <TextView
+        android:id="@+id/textViewEstadoSensor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTituloSensor"
+        tools:text="@string/sensor_disponible" />
+
+    <!-- >>> CAMBIAR AQUÍ <<< TYPE_LIGHT y TYPE_PROXIMITY solo tienen values[0]: puedes ocultar y/z -->
+    <LinearLayout
+        android:id="@+id/layoutDatosSensor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="22sp"
+            tools:text="x: 0.00 m/s²" />
+
+        <TextView
+            android:id="@+id/textViewY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textSize="22sp"
+            tools:text="y: 0.00 m/s²" />
+
+        <TextView
+            android:id="@+id/textViewZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textSize="22sp"
+            tools:text="z: 9.81 m/s²" />
+
+        <TextView
+            android:id="@+id/textViewMagnitud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Magnitud: 9.81 m/s²" />
+
+        <!-- Mensaje derivado: su texto y color cambian según el umbral (ver SensorFragment) -->
+        <TextView
+            android:id="@+id/textViewAlerta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="@string/sensor_mensaje_estable"
+            tools:textColor="@color/sensor_estable" />
+
+        <TextView
+            android:id="@+id/textViewUmbral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            tools:text="Umbral de movimiento: ±3.0 m/s² sobre la gravedad" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

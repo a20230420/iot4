@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">LabModelo</string>
+
+    <!-- >>> CAMBIAR AQUÍ <<< textos según el enunciado -->
+    <!-- Home -->
+    <string name="home_titulo">Laboratorio modelo IoT</string>
+    <string name="home_subtitulo">RecyclerView + Retrofit + Sensores</string>
+    <string name="home_boton_lista">Ver lista</string>
+    <string name="home_boton_sensor">Ver sensor</string>
+
+    <!-- Lista -->
+    <string name="lista_titulo">Lista de usuarios</string>
+    <string name="lista_vacia">No hay datos para mostrar</string>
+    <string name="lista_error_red">No se pudo conectar. Revisa tu conexión a internet.</string>
+    <string name="lista_error_servidor">El servidor respondió con un error. Intenta más tarde.</string>
+    <string name="item_boton_detalle">Ver detalle</string>
+
+    <!-- Detalle -->
+    <string name="detalle_titulo">Detalle del usuario</string>
+    <string name="detalle_label_id">ID</string>
+    <string name="detalle_label_nombre">Nombre</string>
+    <string name="detalle_label_usuario">Usuario</string>
+    <string name="detalle_label_email">Email</string>
+    <string name="detalle_label_telefono">Teléfono</string>
+    <string name="detalle_label_web">Sitio web</string>
+    <string name="detalle_label_empresa">Empresa</string>
+    <string name="detalle_sin_dato">-</string>
+
+    <!-- Sensor -->
+    <string name="sensor_titulo">Acelerómetro</string>
+    <string name="sensor_sin_manager">Este dispositivo no posee sensores</string>
+    <string name="sensor_no_disponible">Este dispositivo no dispone de acelerómetro</string>
+    <string name="sensor_disponible">Acelerómetro detectado</string>
+    <string name="sensor_valor_x">x: %1$.2f m/s²</string>
+    <string name="sensor_valor_y">y: %1$.2f m/s²</string>
+    <string name="sensor_valor_z">z: %1$.2f m/s²</string>
+    <string name="sensor_valor_magnitud">Magnitud: %1$.2f m/s²</string>
+    <string name="sensor_umbral">Umbral de movimiento: ±%1$.1f m/s² sobre la gravedad</string>
+    <string name="sensor_mensaje_estable">Dispositivo estable</string>
+    <string name="sensor_mensaje_movimiento">¡Movimiento brusco!</string>
+</resources>
